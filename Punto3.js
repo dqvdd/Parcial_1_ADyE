@@ -5,21 +5,21 @@
 //David Ordoñez - 2180756
 
 class Node {
-    constructor(value, next = null) {
-      this.value = value;
-      this.next = next;
-    }
+  constructor(value, next = null) {
+    this.value = value;
+    this.next = next;
   }
+}
 
 class SortedLinkedList {
   constructor() {
     this.head = null;
   }
 
-  //agregamos los nodos una vez ya ordenados 
-  //por eso no puedo poner cola, sino que busque 
+  //agregamos los nodos una vez ya ordenados
+  //por eso no puedo poner cola, sino que busque
   //el apuntador que sea mayor o igual en el else
-  append(value) { 
+  append(value) {
     const newNode = new Node(value);
     if (!this.head || value < this.head.value) {
       newNode.next = this.head;
@@ -58,8 +58,6 @@ class SortedLinkedList {
     return merged;
   }
 }
-
-
 
 // Ejemplo
 const list1 = new SortedLinkedList();
